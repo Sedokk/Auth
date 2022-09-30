@@ -1,0 +1,1 @@
+const theName: string = "Gleb"

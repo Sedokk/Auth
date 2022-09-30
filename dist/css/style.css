@@ -1,0 +1,343 @@
+@charset "UTF-8";
+
+/* Указываем box sizing */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Упрощаем работу с изображениями */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #caf0f8;
+}
+
+.container {
+  background-color: #90e0ef;
+  padding: 30px;
+  border-radius: 30px;
+  width: 700px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.switchers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  gap: 0 3px;
+  margin-bottom: 40px;
+}
+
+.switchers button {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  padding: 10px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  -o-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.switchers .btn-active {
+  background-color: #00b4d8;
+  color: white;
+}
+
+.forms-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.forms-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px 0;
+  width: 100%;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  border: none;
+  width: 100%;
+}
+
+.input::-webkit-input-placeholder {
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.input::-moz-placeholder {
+  -moz-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.input:-ms-input-placeholder {
+  -ms-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.input::-ms-input-placeholder {
+  -ms-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.input::placeholder {
+  -webkit-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input:focus::-webkit-input-placeholder {
+  color: transparent;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.input:focus::-moz-placeholder {
+  color: transparent;
+  -moz-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.input:focus:-ms-input-placeholder {
+  color: transparent;
+  -ms-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.input:focus::-ms-input-placeholder {
+  color: transparent;
+  -ms-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.input:focus::placeholder {
+  color: transparent;
+  -webkit-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.label {
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 10px;
+  width: 80%;
+  cursor: text;
+}
+
+.btn {
+  background-color: #00b4d8;
+  color: white;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 30px;
+  font-size: 20px;
+  border: none;
+  margin-top: 20px;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.switched {
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 300px;
+    padding: 20px;
+  }
+
+  .switchers {
+    margin-bottom: 0px;
+  }
+
+  .switchers button {
+    font-size: 17px;
+  }
+
+  .label {
+    width: 90%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+         -o-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
