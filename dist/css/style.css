@@ -87,12 +87,14 @@ select {
 .main {
   display: -ms-grid;
   display: grid;
-  place-items: center;
   height: 100vh;
   background-color: #caf0f8;
 }
 
 .container {
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: center;
+  place-self: center;
   background-color: #90e0ef;
   padding: 30px;
   border-radius: 30px;
